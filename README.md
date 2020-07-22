@@ -32,7 +32,7 @@ Download and install "Seabreeze" library
 	wget https://downloads.sourceforge.net/project/seabreeze/SeaBreeze/source/seabreeze-3.0.11.zip
 	unzip seabreeze-3.0.11.zip -d ./seabreeze/
 	cd seabreeze/seabreeze-3.0.11/SeaBreeze/
-	
+
 Uncomment line from common.mk -> Add "#" in front of line containing "-Werror \" and save
 	
 	nano common.mk
@@ -75,17 +75,7 @@ Continue installation
 	sudo addgroup gpib
 	sudo usermod -aG gpib pi
 
-### 6) Install Raspicam
-	git clone https://github.com/cedricve/raspicam.git
-	cd raspicam
-	mkdir build
-	cd build
-	cmake ..
-	make
-	sudo make install
-	sudo ldconfig
-
-### 7) Install "opencv" (takes a few hours) 
+### 6) Install "opencv" (takes a few hours) 
 	sudo apt-get update
 	sudo apt-get install build-essential cmake unzip pkg-config libjpeg-dev libpng-dev libtiff-dev libavcodec-dev libavformat-dev libswscale-dev libv4l-dev libxvidcore-dev libx264-dev libgtk-3-dev libcanberra-gtk* libatlas-base-dev gfortran python3-dev
 	git clone https://github.com/Itseez/opencv.git && cd opencv && git checkout 3.4
@@ -129,7 +119,7 @@ Load drivers
 	cmake ../ -DCMAKE_INSTALL_PREFIX=~/portaDrop
 	make
 	make install
-	
+
 Starting the appication can be done via terminal by
 
 	cd ~/portaDrop/bin
